@@ -2,9 +2,10 @@ import s from './Contact.module.css';
 import { BsTelephone } from 'react-icons/bs';
 import { SlUser } from 'react-icons/sl';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contactsSlice';
+import { deleteContact } from '../../redux/contactsOps';
 
-const Contact = ({ data: { id, name, number } }) => {
+// eslint-disable-next-line react/prop-types
+const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
