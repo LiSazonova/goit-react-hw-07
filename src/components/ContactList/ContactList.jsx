@@ -12,10 +12,6 @@ const ContactList = () => {
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   if (error) {
     return <div>{error}</div>;
   }
