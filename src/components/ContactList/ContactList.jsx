@@ -22,10 +22,8 @@ const ContactList = () => {
 
   return (
     <ul className={s.contacts_list}>
-      {contacts.map(contact => (
-        <li className={s.contacts_item} key={contact.id}>
-          <Contact data={contact} />
-        </li>
+      {contacts.map(({ id, name, number }) => (
+        <Contact key={id} id={id} name={name} number={number} />
       ))}
     </ul>
   );
